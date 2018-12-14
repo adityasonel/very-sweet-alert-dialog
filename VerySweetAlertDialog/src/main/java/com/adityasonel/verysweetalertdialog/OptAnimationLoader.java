@@ -88,6 +88,8 @@ public class OptAnimationLoader {
                 parent.addAnimation(anim);
             }
         }
+
         return anim;
+
     }
 }

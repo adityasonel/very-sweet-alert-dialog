@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.adityasonel.verysweetalertdialog.SweetAlertDialog;
+import com.adityasonel.verysweetalertdialog.VerySweetAlertDialog;
 
 public class SampleActivity extends AppCompatActivity {
 
@@ -15,20 +15,10 @@ public class SampleActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.tv);
         tv.setOnClickListener(view -> {
-            new SweetAlertDialog(getApplicationContext(), SweetAlertDialog.SUCCESS_TYPE)
+            new VerySweetAlertDialog(SampleActivity.this, VerySweetAlertDialog.SUCCESS_TYPE)
                     .setConfirmText("OK")
                     .setCancelText("Cancel")
-                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                        }
-                    }).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                @Override
-                public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                }
-            });
+                    .setCancelClickListener(VerySweetAlertDialog::dismissWithAnimation).setConfirmClickListener(VerySweetAlertDialog::dismissWithAnimation).show();
         });
     }
 }

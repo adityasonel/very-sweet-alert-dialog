@@ -1,6 +1,6 @@
 package com.adityasonel.verysweetalert;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -15,8 +15,8 @@ public class SampleActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.tv);
         tv.setOnClickListener(view -> {
-            new VerySweetAlertDialog(SampleActivity.this, VerySweetAlertDialog.SUCCESS_TYPE)
-                    .setConfirmText("OK")
+            new VerySweetAlertDialog(SampleActivity.this, VerySweetAlertDialog.WARNING_TYPE)
+                    .setConfirmText("Yeah Sure")
                     .setCancelText("Cancel")
                     .setCancelClickListener(VerySweetAlertDialog::dismissWithAnimation).setConfirmClickListener(VerySweetAlertDialog::dismissWithAnimation).show();
         });

@@ -1,5 +1,7 @@
 Very Sweet Alert Dialog
 ===================
+[![](https://jitpack.io/v/adityasonel/very-sweet-alert-dialog.svg)](https://jitpack.io/#adityasonel/very-sweet-alert-dialog)
+
 VerySweetAlertDialog for Android inspired by SweetAlertDialog with a blend mixture of Material 2.0 design implementation.
 
 ## Setup
@@ -14,11 +16,27 @@ allprojects {
     }
 }
 ````
-then add
+Depend on the [latest version](https://github.com/adityasonel/very-sweet-alert-dialog/releases) of the library.
 ````
-implementation 'com.github.adityasonel:very-sweet-alert-dialog:v1.0.1'
+implementation 'com.github.adityasonel:very-sweet-alert-dialog:$latest-version'
 ````
-in your app's `build.gradle`
+
+Enable [Java 8 language features](https://developer.android.com/studio/preview/features/java8-support.html).
+
+```gradle
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
+
+**Note**: You must use Android Studio 2.4 Preview 4 or newer.
+
+## Sample
+
+![image](https://github.com/adityasonel/very-sweet-alert-dialog/blob/master/demo.gif)
 
 ## Usage
 
